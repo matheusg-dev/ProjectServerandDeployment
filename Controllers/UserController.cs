@@ -17,7 +17,6 @@ public class UserController : ControllerBase
      public void AddUser(User user)
     {
         UserFakerRepository usr = new UserFakerRepository();
-        
     }
     
 }

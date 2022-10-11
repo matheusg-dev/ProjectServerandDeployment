@@ -13,14 +13,6 @@ public class UserFakerRepository : UserRepository
         });
     }
 
-    public UserFakerRepository()
-    {
-    }
-
-    public List<User> GetUsers()
-    {
-        return fakelist;
-    }
 
     public void AddUser(User user)
     {
