@@ -2,15 +2,18 @@ using System.Collections.Generic;
 
 public class ScoreFakeRepository : ScoreRepository
 {
+    
     List<Score> fakelist = new List<Score>();
    
    public ScoreFakeRepository()
     {
         fakelist.Add(new Score()
         {
-           Score1 = 8
+           Score1 = 8,
+           Score2 = 9
         });
     }
+      
 
     public List<Score> GetScores()
     {

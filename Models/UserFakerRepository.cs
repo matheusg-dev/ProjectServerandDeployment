@@ -4,12 +4,17 @@ public class UserFakerRepository : UserRepository
 {
     List<User> fakelist = new List<User>();
 
-    public UserFakerRepository()
+    public UserFakerRepository(object https)
     {
         fakelist.Add(new User()
         {
-            Nickname = "Robertinho"
+            Nickname1 = "Robertinho",
+            Nickname2 = "Robervilson"
         });
+    }
+
+    public UserFakerRepository()
+    {
     }
 
     public List<User> GetUsers()

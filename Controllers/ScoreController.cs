@@ -4,9 +4,18 @@ using Microsoft.AspNetCore.Mvc;
 [Route("Score")]
 public class ScoreController : ControllerBase
 {
-    // [HttpGet]
-    // public IEnumerable<Score> Get([FromServices]UserRepository repo)
-    // {
-    //     return repo.GetScore();
-    // }
+[HttpGet]
+    public ActionResult<List<Score>> GetScores(
+        [FromServices]ScoreRepository repo
+        )
+    {
+        return Ok(repo.GetScores());
+    }
+
+     public void AddScore(Score score)
+    {
+        ScoreFakeRepository scr = new ScoreFakeRepository();
+        
+    }
+    
 }
