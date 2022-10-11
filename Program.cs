@@ -8,6 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<UserRepository>(op => new UserFakerRepository());
+builder.Services.AddSingleton<ScoreRepository>(op => new ScoreFakeRepository());
 
 var app = builder.Build();
 

@@ -6,18 +6,14 @@ namespace ProjectServerandDeployment.Controllers;
 [Route("user")]
 public class UserController : ControllerBase
 {
-
     [HttpGet]
-    public IEnumerable<User> Get([FromServices]UserRepository repo)
+    public ActionResult<List<User>> GetUsers(
+        [FromServices]UserRepository repo
+        )
     {
-        
-        return repo.GetUsers();
+        return Ok(repo.GetUsers());
     }
 
-    public object GetUsers(User usr)
-    {
-        return fakelist;
-    }
      public void AddUser(User user)
     {
         UserFakerRepository usr = new UserFakerRepository();

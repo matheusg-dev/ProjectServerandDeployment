@@ -4,7 +4,7 @@ public class UserFakerRepository : UserRepository
 {
     List<User> fakelist = new List<User>();
 
-    public UserFakerRepository(object https)
+    public UserFakerRepository()
     {
         fakelist.Add(new User()
         {
