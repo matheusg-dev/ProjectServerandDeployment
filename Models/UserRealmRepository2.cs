@@ -4,30 +4,26 @@ public class UserRealmRepository2 : UserRealm
 {
     
     List<UserRealm> fakelist2 = new List<UserRealm>();
-    private UserRealm userRealm;
-
-    public UserRealmRepository2(object https)
+   
+   public UserRealmRepository2()
     {
         fakelist2.Add(new UserRealm()
         {
            Score1 = 8,
-           Score2 = 9,
            Nickname1 = "Robertinho",
-            Nickname2 = "Robervilson"
+           Score2 = 9,
+           Nickname2 = "Robervilson"
+          
         });
     }
-
-    public UserRealmRepository2()
-    {
-    }
-
     public List<UserRealm> GetUserRealms()
     {
         return fakelist2;
     }
 
-    public void AddUserRealm(Score UserRealm)
+    public void AddUserRealm(UserRealm userRealm)
     {
         fakelist2.Add(userRealm);
     }
 }
+
