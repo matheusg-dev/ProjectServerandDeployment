@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+namespace ProjectServerandDeployment.Controllers;
 [ApiController]
 [Route("Score")]
 public class ScoreController : ControllerBase

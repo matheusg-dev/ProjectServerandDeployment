@@ -14,9 +14,9 @@ public class UserController : ControllerBase
         return Ok(repo.GetUsers());
     }
 
-     public void AddUser(User user)
+    public void AddUser(User user)
     {
-        UserFakerRepository usr = new UserFakerRepository();
+        UserFakerRepository scr = new UserFakerRepository();
     }
     
 }
