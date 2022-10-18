@@ -16,7 +16,8 @@ public class ScoreFakeRepository : ScoreRepository
           
         });
     }
-    public List<Score> GetScores()
+
+   public  List<Score> GetScores()
     {
         return fakelist2;
     }

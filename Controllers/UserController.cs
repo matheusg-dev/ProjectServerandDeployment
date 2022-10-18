@@ -12,6 +12,7 @@ public class UserController : ControllerBase
         )
     {
         return Ok(repo.GetUsers());
+        
     }
 
     public void AddUser(User user)

@@ -7,9 +7,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ScoreRepository>(op => new ScoreFakeRepository());
-builder.Services.AddSingleton<UserRepository>(op => new UserFakerRepository());
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
