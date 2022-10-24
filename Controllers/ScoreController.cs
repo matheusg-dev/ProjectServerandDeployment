@@ -1,20 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 namespace ProjectServerandDeployment.Controllers;
+
 [ApiController]
-[Route("Score")]
+[Route("score")]
 public class ScoreController : ControllerBase
 {
-[HttpGet]
+    [HttpGet]
     public ActionResult<List<Score>> GetScores(
         [FromServices]ScoreRepository repo)
     {
         return Ok(repo.GetScores());
     }
 
-     public void AddScore(Score score)
+    [HttpPost]
+    public void AddScore(Score score,
+     [FromServices]ScoreRepository repo)
     {
-        ScoreFakeRepository scr = new ScoreFakeRepository();
-        
+        repo.AddScore(score);
     }
     
 }
