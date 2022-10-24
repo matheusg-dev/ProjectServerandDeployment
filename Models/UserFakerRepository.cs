@@ -24,21 +24,10 @@ public class UserFakerRepository : UserRepository
         fakelist.Add(user);
     }
 
-   public class Score
-   {
-       public static void Main()
-       {
-           List<string> Nickname = new List<string>() { "Robertinho", "Robervilson"};
-
-           foreach (var i in Nickname) {
-
-
-               Console.WriteLine(Nickname);
-
-           }
-
-       }
-   }
+    public User GetByNickname(string nickname)
+    {
+        
+    }
 }
    
     

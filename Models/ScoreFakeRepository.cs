@@ -17,7 +17,7 @@ public class ScoreFakeRepository : ScoreRepository
         });
     }
 
-   public  List<Score> GetScores()
+    public  List<Score> GetScores()
     {
         return fakelist2;
     }
@@ -25,6 +25,10 @@ public class ScoreFakeRepository : ScoreRepository
     public void AddScore(Score score)
     {
         fakelist2.Add(score);
+    }
+    public List<Score> FindByUser(string nickname)
+    {
+        
     }
 }
 
