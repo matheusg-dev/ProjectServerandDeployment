@@ -12,6 +12,36 @@ public class UserFakerRepository : UserRepository
             Nickname = "Robertinho",
             
         });
+        
+        fakelist.Add(new User()
+        {
+            Nickname = "Robervilson",
+            
+        });
+        
+        fakelist.Add(new User()
+        {
+            Nickname = "Leonardo",
+            
+        });
+        
+        fakelist.Add(new User()
+        {
+            Nickname = "Juarei",
+            
+        });
+
+         fakelist.Add(new User()
+        {
+            Nickname = "Cleiton",
+            
+        });
+
+         fakelist.Add(new User()
+        {
+            Nickname = "Paulo",
+            
+        });
     }
 
     public List<User> GetUsers()
@@ -26,10 +56,29 @@ public class UserFakerRepository : UserRepository
 
     public User GetByNickname(string nickname)
     {
-        
+        foreach(User user in fakelist)
+        {
+           if (user.Nickname == nickname)
+           {
+               return user;
+           }
+        }
+        return null;
     }
 }
-   
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
