@@ -13,6 +13,14 @@ public class UserController : ControllerBase
         return Ok(repo.GetUsers());
         
     }
+     [HttpGet]
+    public ActionResult<List<Score>>FindByUser(string nickname,
+        [FromServices]ScoreRepository repo)
+    {
+        return Ok (repo.FindByUser(nickname));
+        
+    }
+    
     [HttpPost]
     public void AddUser(User user,
     [FromServices]UserRepository repo)

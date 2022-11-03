@@ -53,18 +53,14 @@ public class ScoreFakeRepository : ScoreRepository
            {
                scores.Add(score);
             }
-            else{
-            scores.Remove(score);
-            }
+          
            if (score.Nickname2 == nickname)
            {
                scores.Add(score);
            }    
-           else{
-            scores.Remove(score);
-           } 
+         
         }
-            
         return scores;
     }
+  
 }
